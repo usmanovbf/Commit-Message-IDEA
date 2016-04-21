@@ -1,3 +1,2 @@
-commit_task.iml
-*.ida
-*.idea
+/commit_task.iml
+/.idea
