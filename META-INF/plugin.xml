@@ -1,0 +1,38 @@
+<idea-plugin version="2">
+  <id>com.github.usmanovbf.commit-message-idea</id>
+  <name>Commit message</name>
+  <version>1.0</version>
+  <vendor email="usmanovbf@yandex.ru" url="github.com/usmanovbf">UsmanovBF</vendor>
+
+  <description><![CDATA[
+      Plugin for creating commit message like:
+      [nf] short_description (branch_name)
+    ]]></description>
+
+
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="2016.1.1"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="com.github.usmanovbf.commit_message_idea.CommitMessage"
+            class="com.github.usmanovbf.commit_message_idea.CommitMessage"
+            text="Transform Commit Message"
+            description="Add branch to commit message">
+      <add-to-group group-id="Vcs.Specific"
+                    anchor="first"/>
+    </action>
+  </actions>
+
+</idea-plugin>
